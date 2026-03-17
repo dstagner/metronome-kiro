@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#audio-error {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: #856404;
+}
+
+#audio-error.hidden {
+  display: none;
+}
+
+#indicator {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 auto;
+  transition: background 0.05s;
+}
+
+#indicator.active {
+  background: #4caf50;
+}
+
+#indicator.accent {
+  background: #ff9800;
+}
+
+.bpm-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.bpm-section label {
+  font-weight: 500;
+  min-width: 2.5rem;
+}
+
+#slider-bpm {
+  flex: 1;
+  cursor: pointer;
+}
+
+#bpm-display {
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-width: 2.5rem;
+  text-align: right;
+}
+
+.beats-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.beats-section label {
+  font-weight: 500;
+}
+
+#select-beats {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+button {
+  padding: 0.6rem 1.25rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #1976d2;
+  color: #fff;
+  font-weight: 500;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+button:hover:not(:disabled) {
+  background: #1565c0;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+#btn-stop {
+  background: #d32f2f;
+}
+
+#btn-stop:hover:not(:disabled) {
+  background: #b71c1c;
+}
+
+#btn-tap {
+  background: #388e3c;
+}
+
+#btn-tap:hover:not(:disabled) {
+  background: #2e7d32;
+}
